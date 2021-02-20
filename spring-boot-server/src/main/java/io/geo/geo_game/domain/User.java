@@ -44,7 +44,10 @@ public class User implements UserDetails {
         ) 
     private Set<Role> roles ;
     
-    public User() {
+    @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER, mappedBy = "user", orphanRemoval = true)
+    private Set<Part> parts ;
+    
+	public User() {
     }
    
 	public Long getId() {
@@ -155,7 +158,13 @@ public class User implements UserDetails {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+	 public Set<Part> getParts() {
+			return parts;
+		}
 
+	public void setParts(Set<Part> parts) {
+			this.parts = parts;
+		}
 	
 
 }

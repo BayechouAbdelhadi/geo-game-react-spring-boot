@@ -1,0 +1,8 @@
+#!/bin/bash 
+code react-client
+cd react-client
+npm start
+
+
+
+
