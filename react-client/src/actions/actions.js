@@ -100,3 +100,9 @@ export const  enableStart=()=>{
 export const  disableStart=()=>{
     return {type:'DISABLE_START'}
 }
+export const  hideMarkers=()=>{
+    return {type:'HIDE_MARKERS'}
+}
+export const  showMarkers=()=>{
+    return {type:'SHOW_MARKERS'}
+}

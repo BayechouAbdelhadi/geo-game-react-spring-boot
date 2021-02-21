@@ -13,7 +13,7 @@ import {
     startPart,disableStart,
     resetDifference , 
     getAnswer ,getAnswers,incrementIteration,
-    end,resetIteration,start,clearAnswers} from '../actions/actions';
+    end,resetIteration,start,clearAnswers,hideMarkers} from '../actions/actions';
 import useSound from 'use-sound';
 import {findParts} from '../actions/securityActions';
 import note from '../sound/btn.mp3';
@@ -71,8 +71,7 @@ function Direction() {
             dispatch(start());
         }
         if(markers)
-            for(var marker of markers)
-                marker.setMap(null);    
+            dispatch(hideMarkers());
     }
     const save =()=>{
         store.dispatch(saveScore({"score":score}));

@@ -17,10 +17,13 @@ const Container = styled.div`
 `;
 const Copyright=() =>{
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" color="black" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://https://www.facebook.com/profile.php?id=100021563408662-ui.com/">
+      <Link  target ="_blank" href="https://www.github.com/BayechouAbdelhadi">
         BAYECHOU Abdelhadi
+      </Link>{' - '}
+      <Link  target ="_blank" href="https://www.github.com/M-JARIDI">
+        JARIDI Mustapha
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

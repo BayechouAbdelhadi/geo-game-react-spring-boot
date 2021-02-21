@@ -1,7 +1,9 @@
-const markersReducer=(state=[],action)=>{
+const markersReducer=(state=false,action)=>{
     switch(action.type){
-        case 'GET_MARKERS':
-            return action.value;
+        case 'SHOW_MARKERS':
+            return true;
+        case 'HIDE_MARKERS':
+            return false;
         default :
             return state;
     }

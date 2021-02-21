@@ -6,7 +6,8 @@ const Wrapper = styled.div`
   margin-top:7px;
   overflow-y:scroll;
   border: 3px solid ;
-  border-radius: 5px;
+  border-radius: 1%;
+  /*
   transform:
     perspective(2000px)
     translate3d(0px, -66px, 198px)
@@ -18,7 +19,8 @@ const Wrapper = styled.div`
 
   &:hover {
     transform: scale3d(1, 1, 1);
-  }
+  }*/
+  
   `;
 
 export default Wrapper;

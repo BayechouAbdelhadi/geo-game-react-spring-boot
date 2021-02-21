@@ -19,7 +19,7 @@ const drawMarker=(position,google,map)=>{
         });
     return marker;
 }
-const haversineDistance=(start, end) =>{
+export const haversineDistance=(start, end) =>{
     const R = 3958.8, // Radius of the Earth in miles
         rlat1 = start.lat* (Math.PI/180), // Convert degrees to radians
         rlat2 = end.lat * (Math.PI/180), // Convert degrees to radians
