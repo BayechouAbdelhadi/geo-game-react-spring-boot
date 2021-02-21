@@ -14,19 +14,6 @@ import { createNewUser } from "../actions/securityActions";
 import {useStore} from "react-redux";
 
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -154,7 +141,7 @@ const  SignUp =() =>{
             Sign Up
           </Button>
               <Link to="/" >
-                {"Log In"}
+                Log In
               </Link>
         </form>
       </div>

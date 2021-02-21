@@ -1,6 +1,6 @@
 import React ,{useEffect} from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route,Switch,useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route,Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import jwt_decode from "jwt-decode";
@@ -20,7 +20,7 @@ import BodyWrapper from './styledElement/BodyWrapper';
 
 
 
-
+store.subscribe(()=>console.log(store.getState()));
 
 const  App=()=>{
   useEffect(()=>{
@@ -49,7 +49,7 @@ const  App=()=>{
             <BodyWrapper>
               <Switch>
                   <Route exact path="/" component={SignIn} />
-                  <Route  path="/register" component={SignUp} />
+                  <Route  exact path="/register" component={SignUp} />
                   <SecuredRoute exact path="/play" component={GeoGameApp} />
                   <SecuredRoute exact path="/profile" component={Profile} />
               </Switch>

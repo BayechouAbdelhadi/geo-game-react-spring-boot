@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Box  from '@material-ui/core/Box';
 import ScoreTable from './ScoreTable';
+import {useHistory}from 'react-router-dom';
 import Summary from './Summary';
 import {useEffect} from 'react';
 import {DirectionWrapper,Text,Iteration,TextStart} from '../styledElement/DirectionElements.js'
@@ -14,6 +15,7 @@ import {
     getAnswer ,getAnswers,incrementIteration,
     end,resetIteration,start,clearAnswers} from '../actions/actions';
 import useSound from 'use-sound';
+import {findParts} from '../actions/securityActions';
 import note from '../sound/btn.mp3';
 
 function Direction() {
@@ -24,6 +26,7 @@ function Direction() {
     const nbIteration=3;
     const dispatch =useDispatch();
     const store =useStore();
+    const history=useHistory();
     const markers=useSelector(state=>state.markers);
     const city=useSelector(state=>state.city);
     const difference=useSelector(state=>state.difference);
@@ -66,13 +69,16 @@ function Direction() {
             dispatch(resetIteration(1));
             dispatch(clearAnswers());
             dispatch(start());
-            console.log(score);
-            store.dispatch(saveScore({"score":score}));
         }
         if(markers)
             for(var marker of markers)
                 marker.setMap(null);    
     }
+    const save =()=>{
+        store.dispatch(saveScore({"score":score}));
+        history.push('/profile');
+    }
+
 
     useEffect(()=>{
         if(answer && answer.difference>0)
@@ -101,7 +107,7 @@ function Direction() {
             </Box>
             </>:
             <TextStart >Ready to start ?</TextStart>}
-            <Box display ="flex" p={1}justifyContent="center" > 
+            <Box display ="flex" p={1} justifyContent="center" > 
                 <Button variant="contained" 
                             color="primary" 
                             disableElevation 
@@ -109,6 +115,17 @@ function Direction() {
                 >
                         {startGame?'Start':(iteration===nbIteration&& endOfPart)?'finish':endOfGame?'restart':'next'}
                 </Button>
+                {
+                endOfGame &&<Button variant="contained" 
+                            color="primary" 
+                            disableElevation 
+                            onClick={save}
+                            style={{marginLeft:10,background:'green'}}
+
+                >
+                    Save
+                </Button>
+                }
             </Box>
         </DirectionWrapper>
     );

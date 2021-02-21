@@ -1,7 +1,4 @@
-#!/bin/bash 
-sudo /usr/lib/spring-tool/SpringToolSuite4
+#!/bin/bash
 cd spring-boot-server 
 sudo kill -9 $(sudo lsof -t -i:9001)
 mvn spring-boot:run
-
-

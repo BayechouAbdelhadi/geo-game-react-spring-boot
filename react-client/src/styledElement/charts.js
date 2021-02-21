@@ -20,7 +20,7 @@ export default function ChartTest({parts}) {
             data: scores 
           }]
         });
-    }, []);
+    }, [parts]);
     return( 
       <div className='container'>
         <Line data={ dataChart }/> 

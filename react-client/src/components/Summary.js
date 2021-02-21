@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   table: {},
   tableWrapper:{
     maxWidth: 400,
-    maxHeight:150,
+    heigh:80,
     justifyContent:'center',
     margin:'10px',
     OverflowY:'scroll',

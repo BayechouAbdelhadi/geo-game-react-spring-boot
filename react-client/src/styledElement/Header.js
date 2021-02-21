@@ -36,7 +36,10 @@ const useStyles = makeStyles((theme) => ({
     height: 30,
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    marginLeft:'5px'
+    marginLeft:'5px',
+    '&:hover': {
+      background: "#000",
+   },
   },
   profileButton:{
     background: 'white',
@@ -46,6 +49,10 @@ const useStyles = makeStyles((theme) => ({
     height: 30,
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    '&:hover': {
+      background: "#000",
+      color:'white'
+   },
   },
   register:{
     background: 'green',
@@ -55,7 +62,10 @@ const useStyles = makeStyles((theme) => ({
     height: 30,
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    marginLeft:'5px'
+    marginLeft:'5px',
+    '&:hover': {
+      background: "#000",
+   },
 
   },
   login:{
@@ -66,6 +76,9 @@ const useStyles = makeStyles((theme) => ({
     height: 30,
     padding: '0 30px',
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    '&:hover': {
+      background: "#000",
+   },
   },
   header:{
     //background: '#848382',//'linear-gradient(#B03A2E, #F8C471)',
@@ -77,10 +90,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     color:'black',
-    fontWeight :'bold'
-  },
-  
-}));
+    fontWeight :'bold',
+    fontSize:30,
+}}));
 
 const ButtonAppBar=()=> {
   const dispatch =useDispatch();

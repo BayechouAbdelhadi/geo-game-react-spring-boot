@@ -1,4 +1,4 @@
-/*import { createStore, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
@@ -28,7 +28,7 @@ if (window.navigator.userAgent.includes("Chrome")) {
         window.__REDUX_DEVTOOLS_EXTENSION__()
 
 export default store;
-*/
+
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
@@ -55,5 +55,5 @@ if (window.navigator.userAgent.includes("Chrome")) {
     compose(applyMiddleware(...middleware))
   );
 }
-
+*/
 export default store;

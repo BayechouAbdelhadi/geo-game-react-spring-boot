@@ -1,5 +1,5 @@
-import React from 'react';
-import {useSelector} from "react-redux";
+import React,{useEffect} from 'react';
+import {useSelector,useStore} from "react-redux";
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,8 +9,11 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Box  from '@material-ui/core/Box';
-import Chart from '../styledElement/charts'
+import Chart from '../styledElement/charts';
+import  {findParts} from  '../actions/securityActions'
+
 import styled from 'styled-components';
+
 
 const useStyles = makeStyles({
   table: {
@@ -37,8 +40,12 @@ const useStyles = makeStyles({
 
 function Profile() {
     const classes = useStyles();
+    const store=useStore();
     const parts =useSelector(state=>state.parts);
     const fullName =useSelector(state=>state.security.user.fullName);
+    useEffect(()=>{
+      store.dispatch(findParts());
+    });
 
     return (
         <Box className={classes.wrapper} >
@@ -65,7 +72,7 @@ function Profile() {
             </Table>
             </TableContainer>
             </Box>
-            <Box component={Paper} className={classes.subWrapper} p={1}>
+            <Box  className={classes.subWrapper} p={1}>
                 <b>The chart bellow shows your evolution in time </b>
                 <Chart parts={parts}/>
             </Box>
