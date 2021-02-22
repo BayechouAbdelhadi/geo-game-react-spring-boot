@@ -7,6 +7,8 @@
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/services/MapValidationErrorService.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/domain/ERole.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/services/CustomUserDetailsService.java
+/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/services/PartService.java
+/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/web/PartController.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/web/CityController.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/exceptions/RoleException.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/geo_gameApplication.java
@@ -18,10 +20,13 @@
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/security/JwtAuthenticationEntryPoint.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/payload/LoginRequest.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/exceptions/UsernameAlreadyExistsResponse.java
+/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/domain/Part.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/exceptions/InvalidLoginResponse.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/domain/City.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/services/UserService.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/security/SecurityConstants.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/domain/Role.java
+/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/dto/PartDto.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/validator/UserValidator.java
 /home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/security/SecurityConfig.java
+/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/src/main/java/io/geo/geo_game/repositories/PartRepository.java
