@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<project name="maven-antrun-" default="main"  >
-<target name="main">
-  <copy todir="/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/target/classes/public">
-    <fileset dir="/home/abdel/Desktop/geo-game-react-spring-boot/spring-boot-server/react-client/build"/>
-  </copy>
-</target>
-</project>
